@@ -1,10 +1,4 @@
-﻿-- Create the crowdfunding_db database
-CREATE DATABASE crowdfunding_db;
-
--- Connect to the crowdfunding_db database
-\c crowdfunding_db
-
-CREATE TABLE IF NOT EXISTS Category (
+﻿CREATE TABLE IF NOT EXISTS Category (
     category_id VARCHAR(5) PRIMARY KEY,
     category VARCHAR(25) NOT NULL UNIQUE
 );
@@ -38,7 +32,7 @@ CREATE TABLE IF NOT EXISTS Campaign (
     subcategory_id VARCHAR(8) NOT NULL REFERENCES Subcategory (subcategory_id)
 );
 
--- Verify Table Creation --
+-- Verify Table Creation/Imports --
 
 -- Check the 'category' table
 SELECT * FROM category;
