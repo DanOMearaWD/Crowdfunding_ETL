@@ -2,7 +2,7 @@
 
 ## Project Overview
 
-This project is part of the ETL mini project for the Data Science Bootcamp (RUT-VIRT-DATA-PT-08-2024-U-LOLC-MWTH). The objective of this project is to practice building an ETL pipeline using Python, Pandas, and either Python dictionary methods or regular expressions to extract and transform data. The data is related to a crowdfunding platform, and the final goal is to load the transformed data into a PostgreSQL database.
+The objective of this project is to practice building an ETL pipeline using Python, Pandas, and either Python dictionary methods or regular expressions to extract and transform data. The data is related to a crowdfunding platform, and the final goal is to load the transformed data into a PostgreSQL database.
 
 ## Project Components
 
