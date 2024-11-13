@@ -41,6 +41,8 @@ The project involves the following tasks:
 - **ERD**:
   - `ERD.png`: The entity relationship diagram showing the relationships between the tables.
 
+![](ERD.png)
+
 ## Project Instructions
 
 ### 1. **Category and Subcategory DataFrames**:
