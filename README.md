@@ -2,77 +2,75 @@
 
 ## Project Overview
 
-The objective of this project is to practice building an ETL pipeline using Python, Pandas, and regular expressions to extract and transform data. The data is related to a crowdfunding platform, and the final goal is to load the transformed data into a PostgreSQL database.
+The objective of this project is to build an ETL pipeline using Python, Pandas, and regular expressions to extract and transform data related to a crowdfunding platform. The final goal is to load the transformed data into a PostgreSQL database.
 
 ## Project Components
 
-The project involves the following tasks:
-
-1. **Extract, Transform, and Load (ETL)**:
-   - Extract data from the provided `crowdfunding.xlsx` and `contacts.xlsx` files.
-   - Transform the data into several DataFrames, clean and manipulate the data as necessary.
+1. **Extract, Transform, and Load (ETL)**
+   - Extract data from `crowdfunding.xlsx` and `contacts.xlsx`.
+   - Transform the data into structured DataFrames, clean, and manipulate as necessary.
    - Export the transformed data to CSV files: `category.csv`, `subcategory.csv`, `campaign.csv`, and `contacts.csv`.
 
-2. **Create an Entity Relationship Diagram (ERD)**:
-   - Design and sketch an ERD of the tables using QuickDBD based on the transformed data.
+2. **Entity Relationship Diagram (ERD)**
+   - Design and sketch an ERD using QuickDBD based on the transformed data.
 
-3. **Database Schema**:
-   - Use the ERD to create a Postgres schema (`crowdfunding_db_schema.sql`) with tables, primary keys, and foreign keys.
-   - Create a new PostgreSQL database (`crowdfunding_db`), define tables using the schema, and load the data from the CSV files.
+3. **Database Schema**
+   - Use the ERD to create a PostgreSQL schema (`crowdfunding_db_schema.sql`).
+   - Create a PostgreSQL database (`crowdfunding_db`), define tables using the schema, and load data from the CSV files.
 
 ## Files
 
-- **Resources**:
-  - `crowdfunding.xlsx`: Contains crowdfunding campaign data.
-  - `contacts.xlsx`: Contains information about the contacts involved in the campaigns.
-  
-- **CSV Files**:
-  - `category.csv`: Contains the categories for the crowdfunding campaigns.
-  - `subcategory.csv`: Contains the subcategories for the crowdfunding campaigns.
-  - `campaign.csv`: Contains the crowdfunding campaign details.
-  - `contacts.csv`: Contains the contact information for users involved in the campaigns.
+- **Resources**
+  - `crowdfunding.xlsx`: Crowdfunding campaign data.
+  - `contacts.xlsx`: Contact information for the campaigns.
 
-- **SQL File**:
-  - `crowdfunding_db_schema.sql`: The schema for the PostgreSQL database, including tables, primary and foreign keys.
+- **CSV Files**
+  - `category.csv`: Crowdfunding campaign categories.
+  - `subcategory.csv`: Crowdfunding campaign subcategories.
+  - `campaign.csv`: Details of crowdfunding campaigns.
+  - `contacts.csv`: Contact information for users.
 
-- **Jupyter Notebook**:
-  - `ETL_Mini_Project_DOMeara_ALopez_VMadhugiri.ipynb`: The main Jupyter notebook where the ETL pipeline is implemented.
+- **SQL File**
+  - `crowdfunding_db_schema.sql`: PostgreSQL database schema.
 
-- **ERD**:
-  - `ERD.png`: The entity relationship diagram showing the relationships between the tables.
+- **Jupyter Notebook**
+  - `ETL_Mini_Project_DOMeara_ALopez_VMadhugiri.ipynb`: The ETL pipeline implementation.
+
+- **ERD**
+  - `ERD.png`: Entity relationship diagram.
 
 ![](ERD.png)
 
-# Key Findings
+## Summary of Operations
 
-## Data Extraction & Preparation
-- Successfully loaded and previewed `crowdfunding.xlsx` and `contacts.xlsx` data files using Pandas.
-- Extracted relevant information into structured DataFrames, transforming raw data into a usable format.
+### Data Extraction & Preparation
+- Loaded and previewed `crowdfunding.xlsx` and `contacts.xlsx` using Pandas.
+- Extracted and structured data into DataFrames.
 
-## Category & Subcategory Creation
-- Extracted and split categories and subcategories from a combined column using string manipulation techniques.
-- Created `category.csv` and `subcategory.csv` with unique, sequentially numbered identifiers for each category and subcategory.
+### Category & Subcategory Creation
+- Split categories and subcategories using string manipulation.
+- Created `category.csv` and `subcategory.csv` with unique identifiers.
 
-## Data Cleaning & Formatting
-- Formatted the campaign data by renaming and converting columns for consistency, including:
+### Data Cleaning & Formatting
+- Renamed and converted columns for consistency, such as:
   - `blurb` to `description`.
-  - `launched_at` and `deadline` columns to `launch_date` and `end_date`, converting to datetime format.
-- Ensured `goal` and `pledged` values were converted to `float`.
-- Merged the cleaned campaign data with `category_df` and `subcategory_df` for comprehensive information.
+  - `launched_at` and `deadline` to `launch_date` and `end_date`.
+- Converted `goal` and `pledged` values to float.
+- Merged campaign data with `category_df` and `subcategory_df`.
 
-## Campaign DataFrame Creation
-- Created a structured `campaign.csv` file, ensuring the inclusion of all necessary columns: campaign identifiers, financial metrics, and formatted dates.
-- Added `category_id` and `subcategory_id` to match the category and subcategory information.
+### Campaign DataFrame Creation
+- Created `campaign.csv` with necessary columns: campaign identifiers, financial metrics, and dates.
+- Included `category_id` and `subcategory_id`.
 
-## Contact Information Parsing
-- Extracted and cleaned contact data from the JSON-formatted column using Python's `json` module and regular expressions.
-- Created `contacts.csv` with individual columns for `contact_id`, `first_name`, `last_name`, and `email`, ensuring accurate data types.
+### Contact Information Parsing
+- Cleaned contact data from JSON using Python's `json` module and regex.
+- Created `contacts.csv` with columns for `contact_id`, `first_name`, `last_name`, and `email`.
 
-## Data Export
-- Exported all cleaned and formatted DataFrames as CSV files for future analysis and integration:
+### Data Export
+- Exported all DataFrames to CSV:
   - `category.csv`
   - `subcategory.csv`
   - `campaign.csv`
   - `contacts.csv`
 
-These transformations and extractions ensure that the crowdfunding and contact data are ready for analysis, modeling, or integration into other systems.
+These steps ensure that the crowdfunding and contact data are ready for analysis, modeling, or integration into other systems.
