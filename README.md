@@ -39,7 +39,7 @@ The objective of this project is to build an ETL pipeline using Python, Pandas, 
 - **ERD**
   - `ERD.png`: Entity relationship diagram.
 
-![](ERD.png)
+![ERD](ERD.png)
 
 ## Summary of Operations
 
@@ -52,9 +52,9 @@ The objective of this project is to build an ETL pipeline using Python, Pandas, 
 - Created `category.csv` and `subcategory.csv` with unique identifiers.
 
 ### Data Cleaning & Formatting
-- Renamed and converted columns for consistency, such as:
-  - `blurb` to `description`.
-  - `launched_at` and `deadline` to `launch_date` and `end_date`.
+- Renamed and converted columns for consistency:
+  - `blurb` to `description`
+  - `launched_at` and `deadline` to `launch_date` and `end_date`, converting to datetime format
 - Converted `goal` and `pledged` values to float.
 - Merged campaign data with `category_df` and `subcategory_df`.
 
