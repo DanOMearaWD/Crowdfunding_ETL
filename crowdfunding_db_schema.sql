@@ -1,4 +1,7 @@
-﻿CREATE TABLE IF NOT EXISTS Category (
+﻿-- !Add new database in pgAdmin named crowdfunding_db --
+-- Import csv files in same order tables are created: Category,Subcategory,Contacts,Campaign
+
+CREATE TABLE IF NOT EXISTS Category (
     category_id VARCHAR(5) PRIMARY KEY,
     category VARCHAR(25) NOT NULL UNIQUE
 );
