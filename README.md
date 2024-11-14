@@ -43,24 +43,36 @@ The project involves the following tasks:
 
 ![](ERD.png)
 
-## Project Instructions
+# Key Findings
 
-### 1. **Category and Subcategory DataFrames**:
-   - Create DataFrames for categories and subcategories, assigning sequential unique IDs (`cat1`, `cat2`, etc., for categories, `subcat1`, `subcat2`, etc., for subcategories).
-   - Export these DataFrames to `category.csv` and `subcategory.csv`.
+## Data Extraction & Preparation
+- Successfully loaded and previewed `crowdfunding.xlsx` and `contacts.xlsx` data files using Pandas.
+- Extracted relevant information into structured DataFrames, transforming raw data into a usable format.
 
-### 2. **Campaign DataFrame**:
-   - Extract and transform the campaign data from `crowdfunding.xlsx`.
-   - Merge the category and subcategory IDs into the campaign DataFrame.
-   - Export the campaign DataFrame to `campaign.csv`.
+## Category & Subcategory Creation
+- Extracted and split categories and subcategories from a combined column using string manipulation techniques.
+- Created `category.csv` and `subcategory.csv` with unique, sequentially numbered identifiers for each category and subcategory.
 
-### 3. **Contacts DataFrame**:
-   - Extract contact data from `contacts.xlsx` using Python dictionary methods or regular expressions.
-   - Split the "name" column into first and last names.
-   - Export the contacts DataFrame to `contacts.csv`.
+## Data Cleaning & Formatting
+- Formatted the campaign data by renaming and converting columns for consistency, including:
+  - `blurb` to `description`.
+  - `launched_at` and `deadline` columns to `launch_date` and `end_date`, converting to datetime format.
+- Ensured `goal` and `pledged` values were converted to `float`.
+- Merged the cleaned campaign data with `category_df` and `subcategory_df` for comprehensive information.
 
-### 4. **Crowdfunding Database**:
-   - Design the ERD and schema for the database.
-   - Create the `crowdfunding_db` PostgreSQL database and create tables based on the schema.
-   - Import the CSV files into the corresponding tables.
-   - Verify the data by running a SELECT query on each table.
+## Campaign DataFrame Creation
+- Created a structured `campaign.csv` file, ensuring the inclusion of all necessary columns: campaign identifiers, financial metrics, and formatted dates.
+- Added `category_id` and `subcategory_id` to match the category and subcategory information.
+
+## Contact Information Parsing
+- Extracted and cleaned contact data from the JSON-formatted column using Python's `json` module and regular expressions.
+- Created `contacts.csv` with individual columns for `contact_id`, `first_name`, `last_name`, and `email`, ensuring accurate data types.
+
+## Data Export
+- Exported all cleaned and formatted DataFrames as CSV files for future analysis and integration:
+  - `category.csv`
+  - `subcategory.csv`
+  - `campaign.csv`
+  - `contacts.csv`
+
+These transformations and extractions ensure that the crowdfunding and contact data are ready for analysis, modeling, or integration into other systems.
