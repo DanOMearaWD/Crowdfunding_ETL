@@ -48,7 +48,42 @@ The objective of this project is to build an ETL pipeline using Python, Pandas, 
 - Extracted and structured data into DataFrames.
 
 ### Category & Subcategory Creation
-- Split categories and subcategories using string manipulation.
+- Split categories and subcategories using string manipulation:
+     - Found 9 Unique Categories
+          - Film & Video
+          - Food
+          - Games
+          - Journalism
+          - Music
+          - Photography
+          - Publishing
+          - Technology
+          - Theater
+     - Found 24 Unique Subcategories
+          - Animation
+          - Audio
+          - Documentary
+          - Drama
+          - Electric Music
+          - Fiction
+          - Food Trucks
+          - Indie Rock
+          - Jazz
+          - Metal
+          - Mobile Games
+          - Nonfiction
+          - Photography Books
+          - Plays
+          - Radio & Podcasts
+          - Rock
+          - Science Fiction
+          - Shorts
+          - Television
+          - Translations
+          - Video Games
+          - Wearables
+          - Web
+          - World Music
 - Created `category.csv` and `subcategory.csv` with unique identifiers.
 
 ### Data Cleaning & Formatting
